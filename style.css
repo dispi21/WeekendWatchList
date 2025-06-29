@@ -1,0 +1,18 @@
+:root {
+  --gold: #FFD700;
+  --bg-black: #0d0d0d;
+  --bg-glossy: #1a1a1a;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

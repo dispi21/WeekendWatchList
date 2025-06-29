@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekend Watch List</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-[var(--bg-black)] text-white">
+  <header class="p-6 text-center text-4xl font-bold text-[var(--gold)] tracking-wider uppercase">
+    Weekend Watch List
+  </header>
+
+  <main class="space-y-16 px-6 py-8">
+    <section id="popular" class="movie-row"></section>
+    <section id="top-rated" class="movie-row"></section>
+
+    <!-- Random Movie Banner -->
+    <section class="relative rounded-2xl overflow-hidden bg-[var(--bg-glossy)] shadow-2xl">
+      <div class="relative w-full h-[300px] sm:h-[400px] overflow-hidden">
+        <img id="banner-img" class="absolute w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80 z-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center p-6 z-20">
+          <h2 id="banner-title" class="text-4xl font-bold text-[var(--gold)] drop-shadow-md"></h2>
+          <p id="banner-desc" class="text-white max-w-xl mt-4 text-lg drop-shadow-sm"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="horror" class="movie-row"></section>
+    <section id="thriller" class="movie-row"></section>
+
+    <h2 class="text-2xl text-center font-semibold text-[var(--gold)] mt-12">Feeling Lucky?</h2>
+
+    <!-- Lucky Movie Banner -->
+    <section class="relative rounded-2xl overflow-hidden bg-[var(--bg-glossy)] shadow-2xl">
+      <div class="relative w-full h-[300px] sm:h-[400px] overflow-hidden">
+        <img id="lucky-banner-img" class="absolute w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80 z-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center p-6 z-20">
+          <a id="lucky-banner-title" target="_blank" class="text-4xl font-bold text-[var(--gold)] drop-shadow-md hover:underline"></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex justify-center mt-4">
+      <button onclick="updateLuckyBanner()" class="px-6 py-2 text-lg bg-[var(--gold)] text-black font-bold rounded-xl hover:bg-yellow-400 transition">
+        Random Movie
+      </button>
+    </div>
+
+    <section id="curator" class="movie-row"></section>
+    <section id="rara" class="movie-row"></section>
+
+    <!-- Outro -->
+    <h2 class="text-center text-gray-500 text-2xl mt-12">Thrown Together by Ashhar</h2>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
