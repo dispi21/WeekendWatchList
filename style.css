@@ -16,3 +16,28 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes goldPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 4px #ffd700,
+      0 0 8px #ffd700,
+      0 0 12px #ffcc00,
+      0 0 16px #ffcc00;
+    opacity: 1;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #a68c00,
+      0 0 6px #a68c00,
+      0 0 10px #a68c00,
+      0 0 14px #a68c00;
+    opacity: 0.8;
+  }
+}
+
+.gold-pulse {
+  animation: goldPulse 2.5s infinite ease-in-out;
+  color: #ffd700;
+}
+
